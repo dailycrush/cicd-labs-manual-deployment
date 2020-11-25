@@ -12,7 +12,7 @@ jobs:
                         - name: Run
                           env:
                                   IP: 13.209.14.51
-                          run:
+                          run: |
                                   export AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY_ID }}
                                   export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
                                   aws s3 cp index.html s3://workshop-practices/13.209.14.51 --acl public-read
